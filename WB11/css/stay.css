@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+/*stay.htmlのスタイル*/
+
+article section{
+    margin: 0 0 5px 0;
+    border-bottom: dashed 2px #6335FF;
+  }
+  
+  article h2{
+    width:  400px;
+    margin: 0 0 20px 0;
+    padding: 5px 3px 3px 5px;
+    border: 1px #f00 solid;
+    border-width: 1px 1px 1px 20px;
+    border-color: #6335FF;/* */
+    border-style: solid;
+    background-color: #fff;
+  }
+  
+  
+  article p{
+    margin: 0 0 20px 0;
+    padding: 0 0 0 25px;
+    background-color: #fff;
+  }
+  
+  article ul{
+    margin: 0 0 20px 80px;
+    list-style-image: url(../images/circle.gif);
+  }
+   
+    article ul li{
+      margin: 0 0 3px 0;
+    }
+  
+  article table{
+    windth: 700px;
+    margin: 0 auto 20px auto;
+    border-spacing: 5px;
+  }
+  
+    article table th , 
+    article table td{
+      padding: 10px;
+      background-color:#fcffb7;
+    }
+      
+      article table td.td_img{width: 300px;}
+      article table td.td_name{width: 80px;}
+      
+        article table td img{
+          vertical-align: bottom;
+          /*なぜか画像の下の隙間が消える*/
+        }
+  
+  
+article div.gtt{
+  text-align: right;
+  font-size: 0.8em;
+}
+

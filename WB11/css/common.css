@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+/* 共通のスタイル */
+
+/*ユニバーサルセレクタ (全称セレクタ)*/
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+/* 要素セレクタ (タグセレクタ/タイプセレクタ) */
+body{
+  background-color:#fcffb7;
+}
+
+
+a:link{
+  color: #ff0000;
+  text-decoration: none;
+}
+a:visited{
+  color: #ff0000;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+a:active{color: #f00;}
+
+
+/* idセレクタ(#)*/
+div#wrap{
+  width: 1000px;
+  margin: 0 auto 0 auto;
+}
+
+
+
+header{
+  background-color: #fff;
+}
+
+  header h1{
+    line-height: 0;/*行間:文章の*/
+    margin: 0 0 10px 0;
+  }
+  
+  header p{
+    padding: 0 0 10px 0;
+    text-align: center;
+    line-height: 1.6em;
+  }
+
+
+
+nav{
+  height: 30px;
+  background-color: #fff;
+}
+
+
+
+  nav ul{
+    width: 900px;
+    margin: 0 auto 0 auto;
+    list-style-type: none;/*リストのマーク：消す；*/
+  }
+    nav ul li{
+      float: left;
+      
+      line-height: 0;
+    }
+      nav ul li a{}
+        nav ul li a img {}
+
+
+article{
+  clear: both;/*floatしたら必ずclear*/
+  
+  padding: 20px;
+  background-color: #fff;
+}
+
+
+
+
+footer{
+  padding: 5px 8px 5px 5px;
+  text-align: right;
+  font-size: 0.8em;
+  background-color: #6335FF;
+ }
+
+
+
+ /* クラスセレクタ(.) */
+ 
+ 
+ 
+ /*ロールオーバー*/
+ nav ul li a{
+  display: block;
+  width:150px;
+  height:30px;
+ }
+ 
+ nav ul li#roll_01 a{
+  background-image:url(../images/home_link.gif);
+ }
+ nav ul li#roll_01 a:hover{
+   background-image:url(../images/home_hover.gif);
+ }
+ 
+ 
+ 
+ nav ul li#roll_02 a{
+  background-image:url(../images/stay_link.gif);
+ }
+ nav ul li#roll_02 a:hover{
+   background-image:url(../images/stay_hover.gif);
+ }
+ 
+ 
+ 
+ nav ul li#roll_03 a{
+  background-image:url(../images/event_link.gif);
+ }
+ nav ul li#roll_03 a:hover{
+   background-image:url(../images/event_hover.gif);
+ }
+ 
+ 
+ 
+ nav ul li#roll_04 a{
+  background-image:url(../images/experience_link.gif);
+ }
+ nav ul li#roll_04 a:hover{
+   background-image:url(../images/experience_hover.gif);
+ }
+ 
+ 
+ 
+ nav ul li#roll_05 a{
+  background-image:url(../images/photo_link.gif);
+ }
+ nav ul li#roll_05 a:hover{
+   background-image:url(../images/photo_hover.gif);
+ }
+ 
+ 
+ 
+ nav ul li#roll_06 a{
+  background-image:url(../images/inquiry_link.gif);
+ }
+ nav ul li#roll_06 a:hover{
+   background-image:url(../images/inquiry_hover.gif);
+ }
+ 
+ /*スクロールバーを強制表示*/
+ body{
+  overflow-y: scroll;
+ }
+ 
+ 
