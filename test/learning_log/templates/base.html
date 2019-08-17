@@ -1,0 +1,74 @@
+{% load static %}
+{% load bootstrap3 %}
+<!--加载django-bootstrap3中的模板标签集-->
+<!DOCTYPE html>
+<html lang='en'>
+
+<!--  <head>-->
+<!--    <meta charset="utf-8">-->
+<!--&lt;!&ndash;    <meta name="viewport" content="width=device-width,initial-scale=1">&ndash;&gt;-->
+<!--&lt;!&ndash;    <title>bootstarp</title>&ndash;&gt;-->
+<!--&lt;!&ndash;    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">&ndash;&gt;-->
+<!--&lt;!&ndash;      <script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.js"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;      <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>&ndash;&gt;-->
+
+
+<!--    {% block stylesheet %}{% endblock %}  &lt;!&ndash; 这里 &ndash;&gt;-->
+<!--  </head>-->
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Learning Log</title>
+ {% bootstrap_css %}
+{% bootstrap_javascript %}
+ </head>
+
+
+
+ <body>
+
+
+
+ <nav class="navbar navbar-inverse navbar-static-top">
+
+    <div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed"
+        data-toggle="collapse" data-target="#navbar"
+        aria-expanded="false" aria-controls="navbar">
+        </button>
+        <a class="navbar-brand" href="{% url 'learning_logs:index' %}">Learning Log</a>
+    </div>
+
+        <div id="navbar" class="navbar-collapse collapse"> <ul class="nav navbar-nav">  <li><a href="{% url 'learning_logs:topics' %}">Topics</a></li>
+    </ul>
+            <ul class="nav navbar-nav navbar-right">
+                {% if user.is_authenticated %}
+                <li><a>Hello, {{ user.username }}</a></li>
+                <li><a href="{% url 'account:logout' %}">log out</a></li>
+            {% else %}
+            <li><a href="{% url 'account:register' %}">register</a></li>
+            <li><a href="{% url 'account:login' %}">log in</a></li>
+            {% endif %}  </ul>
+            </div><!--/.nav-collapse -->
+            </div>
+    </nav>
+
+
+<!--#页面主要部分-->
+        <div class="container">
+            <div class="page-header">
+                {% block header %}{% endblock header %}
+            </div>
+            <div>
+                {% block content %}{% endblock content %}
+            </div>
+        </div>
+
+
+
+
+ </body>
+</html>
